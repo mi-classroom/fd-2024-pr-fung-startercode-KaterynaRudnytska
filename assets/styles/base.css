@@ -275,32 +275,40 @@ a:not(.wrap):hover {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .work-item {
-  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F4F1EB;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   border: 1px solid #ddd;
+  position: relative;
 }
 
 .work-image {
-  width: 100%;
+  width: 120px;
+  height: 100px;
   object-fit: cover;
+  margin-right: 1rem;
 }
 
 .work-details {
-  padding: 1.5rem;
-  background-color: #fff;
+  padding: 1rem;
+  background-color: #F4F1EB;
+  flex: 1;
 }
 
 .work-details h3 {
   font-size: 1.1rem;
   color: #00748e;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .work-details .author {
@@ -309,13 +317,15 @@ a:not(.wrap):hover {
   font-weight: normal;
 }
 
-.work-details:after {
+.work-item:after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
   background-color: #d16;
-  margin-top: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .load-more-button {
@@ -349,24 +359,7 @@ a:not(.wrap):hover {
     width: 100%;
   }
 }
+
 .hidden {
   display: none;
-}
-
-.load-more-button {
-  display: block;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background-color: #d16;
-  color: #fff;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
-}
-
-.load-more-button:hover {
-  background-color: #FF80AB;
 }
