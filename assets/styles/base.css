@@ -72,7 +72,6 @@ h3:has(i[class^="icofont-"]) {
   margin-top: var(--size-xl);
 }
 
-
 p {
   margin-bottom: var(--size-xs);
 }
@@ -85,7 +84,6 @@ p + h2 {
 p + h3 {
   margin-top: var(--size-l);
 }
-
 
 img {
   width: 100%;
@@ -190,16 +188,17 @@ a:not(.wrap):hover {
     grid-template-columns: 400px 1fr;
   }
 }
+
 .with-icon {
   display: flex;
   align-items: center;
 }
 
 .with-icon i {
-  margin-right: 0.5rem; 
+  margin-right: 0.5rem;
   vertical-align: middle;
   font-size: 1.5rem;
-  color: var(--headline-color); 
+  color: var(--headline-color);
 }
 
 /*Bereich „Thema vorschlagen“ */
@@ -252,4 +251,101 @@ a:not(.wrap):hover {
 
 .submit-button:hover {
   background-color: #FF80AB;
+}
+
+/* Bereich „Abgeschlossene Arbeiten“ */
+.with-bg-light {
+  background-color: #E6DED1;
+  padding: 2rem;
+  color: #333;
+  margin-top: 2rem;
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.with-icon i {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+  color: #00748e;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+}
+
+.work-item {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+}
+
+.work-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.work-details {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.work-details h3 {
+  font-size: 1.1rem;
+  color: #00748e;
+  margin: 0 0 1rem 0;
+}
+
+.work-details .author {
+  font-size: 0.9rem;
+  color: #d16;
+  font-weight: normal;
+}
+
+.work-details:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #d16;
+  margin-top: 1rem;
+}
+
+.load-more-button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 1rem 2rem;
+  background-color: #d16;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.load-more-button:hover {
+  background-color: #FF80AB;
+}
+
+@media (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-item {
+    flex-direction: column;
+  }
+
+  .work-image {
+    width: 100%;
+  }
 }
