@@ -78,6 +78,33 @@
     <p>Das Ergebnis dieser Arbeit ist eine für Desktop-und Mobilgerate optimierte Webapp, welche unter https://www.can-i-cai.de erreichbar ist.</p>
     </section>
 
+    <h3>Bilder aus dem Projektverlauf</h3>
+    <div class="project-images-grid">
+
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-01-s.webp" alt="Projektbild 1">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-02-s.webp" alt="Projektbild 2">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-03-s.webp" alt="Projektbild 3">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-04-s.webp" alt="Projektbild 4">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-05-s.webp" alt="Projektbild 5">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-06-s.webp" alt="Projektbild 6">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-07-s.webp" alt="Projektbild 7">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-08-s.webp" alt="Projektbild 8">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-09-s.webp" alt="Projektbild 9">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-10-s.webp" alt="Projektbild 10">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-11-s.webp" alt="Projektbild 11">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-12-s.webp" alt="Projektbild 12">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-13-s.webp" alt="Projektbild 13">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-14-s.webp" alt="Projektbild 14">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-15-s.webp" alt="Projektbild 15">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-16-s.webp" alt="Projektbild 16">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-17-s.webp" alt="Projektbild 17">
+      <img src="/assets/works/n-pola/04-results/images/polarek-nils-ba-ss24-bilddokumentation-18-s.webp" alt="Projektbild 18">
+    </div>
+
+    <h3>Abschlussvideo</h3>
+  <iframe id="youtube-video" src="https://www.youtube.com/embed/QXwDuePHw5U" frameborder="0" allowfullscreen></iframe>
+
+</main>
 
   <footer class="footer">
     <div>
@@ -92,6 +119,26 @@
       </p>
     </div>
   </footer>
+
+ <!--mithilfe von ChatGPT geschrieben-->
+
+  <script>
+    fetch('/works/n-pola/04-results/images/metadata.json')
+      .then(response => response.json())
+      .then(data => {
+
+        const imageGrid = document.getElementById('project-images-grid');
+  
+        data.images.forEach(image => {
+          const img = document.createElement('img');
+          img.src = image.src;
+          img.alt = image.alt;
+
+          imageGrid.appendChild(img);
+        });
+      })
+      .catch(error => console.error('Fehler beim Laden der Bilder:', error));
+  </script>
 
 </body>
 
